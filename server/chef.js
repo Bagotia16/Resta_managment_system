@@ -10,10 +10,14 @@ const pool = new Pool({
 });
 
 function getChef(req, res) {
+    const userId = req.body.userId
+    const password = req.body.password
+
     return new Promise((resolve, reject) => {
-        pool.query(`select *
-                    from restaurant`, 
-                    (error, results) => {
+        pool.query(`select count(*) 
+                    from chef 
+                    where chef_id = $1 and 
+                    password = $2`, [userId, password], (error, results) => {
             if (error) {
                 reject(error);
             }
