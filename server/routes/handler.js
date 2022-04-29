@@ -34,7 +34,7 @@ router.get('/customer/:customer_id', (req, res) => {
     })
 })
 
-router.get('/customer/:customer_id/:restaurant_id', (req, res) => {
+router.get('/customer/:customer_id/restaurant/:restaurant_id', (req, res) => {
     getRestaurantId(req,res)
     .then(menu => {
         res.json(menu);

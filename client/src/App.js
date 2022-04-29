@@ -7,7 +7,8 @@ import Manager from './component/Manager';
 import Waiter from './component/Waiter';
 import Chef from './component/Chef';
 import Cashier from './component/Cashier';
-import RestaurantId from './component/RestaurantId'
+import RestaurantId from './component/RestaurantId';
+import OrderId from './component/Order';
 import {BrowserRouter as Router, Route, Routes} from 'react-router-dom';
 
 function App() {
@@ -19,7 +20,8 @@ function App() {
             <Route path="/" element = {<Home/>} />
              <Route path="/customer" element = {<Customer/>} />
             <Route path="/customer/:customer_id/" element = {<CustomerId/>} />
-            <Route path="/customer/:customer_id/:restaurant_id" element = {<RestaurantId/>} />
+            <Route path="/customer/:customer_id/restaurant/:restaurant_id/" element = {<RestaurantId/>} />
+            <Route path="/customer/:customer_id/restaurant/:restaurant_id/order/" element = {<OrderId/>} />
             <Route path="/manager" element = {<Manager/>} />
             <Route path="/waiter" element = {<Waiter/>} />
             <Route path="/chef" element = {<Chef/>} />

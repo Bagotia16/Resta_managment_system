@@ -22,7 +22,7 @@ function getCustomer(req, res) {
     // console.log(name.charCodeAt(0))
 
     if(name == "" || contact == "") {
-        console.log("name or contact is null");
+        // console.log("name or contact is null");
         // login
         return new Promise((resolve, reject) => {
             pool.query(`select count(*) 

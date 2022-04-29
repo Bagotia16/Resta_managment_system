@@ -50,7 +50,7 @@ function CustomerId(){
                 <TableBody>
                     <StyledTableRow key={customer.restra_name}>
                         <StyledTableCell component="th" scope="row">
-                            <Link to={"/customer/"+ customer_id + "/"+ customer.restra_name} style = {{textDecoration: "None"}}>{customer.restra_name}</Link>
+                            <Link to={"/customer/"+ customer_id + "/restaurant/"+ customer.restra_name} style = {{textDecoration: "None"}}>{customer.restra_name}</Link>
                         </StyledTableCell>
                         <StyledTableCell align="right">{customer.contact}</StyledTableCell>
                         <StyledTableCell align="right">{customer.address}</StyledTableCell>
